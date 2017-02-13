@@ -48,7 +48,7 @@ hi SpellErrors guibg=red guifg=black ctermbg=red ctermfg=black
                         " ignore these files when completing names and in
                         " explorer
 set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
-set shell=/bin/bash     " use bash for shell commands
+set shell=/bin/zsh      " use bash for shell commands
 set autowriteall        " Automatically save before commands like :next and :make
 set hidden              " enable multiple modified buffers
 set history=10000
@@ -252,3 +252,14 @@ let g:indentLine_conceallevel = &conceallevel
 " plugins/70-languages/plugins/json/plugins/noconceal/files -------------------
 
 let g:vim_json_syntax_conceal = 0
+
+" Two js equal to an esc
+inoremap jj <ESC>
+inoremap JJ <ESC>
+inoremap Jj <ESC>
+inoremap jJ <ESC>
+
+set colorcolumn=81
+
+" Relative numbering for easy scanning through the file
+set rnu
