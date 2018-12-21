@@ -86,17 +86,6 @@ endif
 
 Plugin('AndrewRadev/switch.vim')
 
-" making some of the switches defined for ruby work in HAML files
-autocmd FileType haml let b:switch_definitions =
-      \ [
-      \   g:switch_builtins.ruby_hash_style,
-      \   g:switch_builtins.ruby_string,
-      \   g:switch_builtins.true_false,
-      \   g:switch_builtins.true_false,
-      \ ]
-
-nnoremap ` :Switch<cr>
-
 " plugins/30-general/plugins/utl/files -------------------
 
 Plugin('utl.vim')
@@ -307,50 +296,6 @@ Plugin('elzr/vim-json')
 " plugins/70-languages/plugins/markdown/files -------------------
 
 Plugin('tpope/vim-markdown')
-
-" plugins/70-languages/plugins/ruby/files -------------------
-
-" Ruby syntax support
-Plugin('vim-ruby/vim-ruby')
-
-" A custom text object for selecting ruby blocks (ar/ir)
-Plugin('kana/vim-textobj-user')
-Plugin('nelstrom/vim-textobj-rubyblock')
-
-" toggle ruby blocks style
-Plugin('vim-scripts/blockle.vim')
-
-" bundler integration (e.g. :Bopen)
-Plugin('tpope/vim-bundler')
-
-" rake integration
-Plugin('tpope/vim-rake')
-
-" ruby refactoring
-Plugin('ecomba/vim-ruby-refactoring')
-
-let g:blockle_mapping = '<Leader>B'
-
-" plugins/70-languages/plugins/ruby/plugins/1-haml/files -------------------
-
-Plugin('tpope/vim-haml')
-
-" plugins/70-languages/plugins/ruby/plugins/9-rails/files -------------------
-
-" Rails support
-Plugin('tpope/vim-rails')
-
-" apidock.com docs integration
-Plugin('apidock.vim')
-
-" lightweight Rspec runner for Vim
-Plugin('thoughtbot/vim-rspec')
-
-" Rails i18n extraction plugin
-Plugin('stefanoverna/vim-i18n')
-
-" vim-rspec
-map <Leader>r :call RunNearestSpec()<CR>
 
 " plugins/70-languages/plugins/tasks/files -------------------
 

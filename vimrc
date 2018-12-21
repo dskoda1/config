@@ -2,6 +2,7 @@
 " plugins/10-init/files -------------------
 
 set nocompatible
+filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -263,3 +264,16 @@ set colorcolumn=81
 
 " Relative numbering for easy scanning through the file
 set rnu
+
+" Go syntax highlighting
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
+
+
+Plugin 'rust-lang/rust.vim'
